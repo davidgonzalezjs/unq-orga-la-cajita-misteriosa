@@ -11,7 +11,7 @@ function cargarEntrada(id, operando) {
 					<span></span>
 				</label>
 			</span>
-		`).join('') + "<span>--------------------------></span>"
+		`).join('')
 }
 
 function cargarSalida(bits) {
