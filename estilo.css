@@ -1,15 +1,16 @@
 body {
 	font-family: sans-serif;
+	margin: 5px;
 }
 
 
-#cajita-misteriosa img{
+#cajita-misteriosa img {
 	border-radius: 50px;
 	padding: 5px;
 	background-color: #030;
 }
 
-.container {
+.contenedor {
 	display: flex;
 	align-items: center;
 }
@@ -73,4 +74,11 @@ body {
 
 #salida {
 	display: flex;
+}
+
+.recuadro {
+	border: 2px dashed #999;
+	border-radius: 15px;
+	padding: 3px;
+	margin: 2px;
 }
