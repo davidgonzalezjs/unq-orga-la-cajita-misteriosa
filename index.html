@@ -1,43 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>La Cajita Misteriosa</title>
 	<meta charset="utf-8">
-	<title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
-	<h1>La cajita misteriosa</h1>
-	<div class="container">
+	<div class="container-fluid">
+		<h1>La cajita misteriosa</h1>
+		<div class="contenedor">
 
-		<div id="entradas">
-			<p>Codigo de operacion</p>
-			<div id="codOp"    ></div>
-			<p>Operando 1</p>
-			<div id="operando1"></div>
-			<p>Operando 2</p>
-			<div id="operando2"></div>
+			<div class="row align-items-center">
+				
+				<div id="entradas" class="">
+					<div class="recuadro">
+						<p>Codigo de operacion</p>
+						<div id="codOp"    ></div>
+					</div>
+
+					<div class="recuadro">
+						<p>Operando 1</p>
+						<div id="operando1"></div>
+					</div>
+
+					<div class="recuadro">
+						<p>Operando 2</p>
+						<div id="operando2"></div>
+					</div>
+				</div>
+
+				<div id="cajita-misteriosa" class="img-responsive d-none d-sm-block">
+					<img src="acertijo.jpg" title="Cosas misteriosas pasan dentro de LA CAJITA MISTERIOSA..".>
+				</div>
+
+				<div class="recuadro">
+					<p>Salida</p>
+					<div id="salida" class=""></div>
+				</div>
+
+			</div>
+
 		</div>
 
-		<div id="cajita-misteriosa">
-			<img src="acertijo.jpg">
+		<div class="row">
+			<button id="btn-calcular" class="btn btn-primary">Calcular</button>
 		</div>
 
-		<div id="salida"></div>
-
+		<div class="row">
+			<div>
+				<h4>Codigos de operacion:</h4>
+				<ul>
+					<li>00: multiplicacion</li>
+					<li>01: suma</li>
+					<li>10: resta</li>
+					<li>11: division</li>
+				</ul>
+			</div>
+		</div>
 	</div>
-
-	<button id="btn-calcular">Calcular</button>
-
-	<div>
-		<h4>Codigos de operacion:</h4>
-		<ul>
-			<li>00: multiplicacion</li>
-			<li>01: suma</li>
-			<li>10: resta</li>
-			<li>11: division</li>
-		</ul>
-	</div>
-
 	<script src="app.js"></script>
 </body>
 </html>
