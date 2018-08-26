@@ -1,5 +1,5 @@
-////////////////////////////////////////////////////////////////////////////
-
+/////////////////////////////////////////////////////////////////////////
+// Inserta en el DOM una serie de "botoncitos" que que van a funcionar como input de la cajita misteriosa
 function cargarEntrada(id, operando) {
 	document.getElementById(id).innerHTML =
 		operando.map(bit => `
@@ -14,6 +14,7 @@ function cargarEntrada(id, operando) {
 		`).join('')
 }
 
+// Inserta en el DOM las "lamparitas" que representan las salidas de la cajita
 function cargarSalida(bits) {
 	document.getElementById('salida').innerHTML =
 		bits.map(bit => 
@@ -25,14 +26,22 @@ function cargarSalida(bits) {
 
 ////////////////////////////////////////////////////////////////////////////
 
-var operaciones = {
-	0b00: { id: '*', fn: (x,y) => x * y },
-	0b01: { id: '+', fn: (x,y) => x + y },
-	0b10: { id: '-', fn: (x,y) => x - y },
-	0b11: { id: '/', fn: (x,y) => Math.floor(x / y) },
+// evaluar :: (Number, Number, Number) -> Number
+function evaluar(codOp, x, y) {
+	
+	let resultado
+
+	switch (codOp) {
+		case 0b00: resultado = (x * y)           ; break;
+		case 0b01: resultado = (x + y)           ; break;
+		case 0b10: resultado = (x - y)           ; break;
+		case 0b11: resultado = Math.floor(x / y) ; break;
+	}
+
+	return resultado & 0xFFFF // esta mierda es para que tire un resultado valido en CA2
 }
 
-var evaluar = (codOp, x, y) => operaciones[codOp].fn(x,y)
+///////////////////////////////////////////////////////////////////////////
 
 function obtenerBinarioDeCheckboxs(elems) {
 	return Array.from(elems).map(elem => elem.checked ? 1 : 0).join('')
