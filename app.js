@@ -3,7 +3,7 @@
 function cargarEntrada(id, operando) {
 	document.getElementById(id).innerHTML =
 		operando.map(bit => `
-			<span class="boton-entrada ${id}">
+			<span class="boton-entrada ${id}" onclick="calcular()">
 				<label>
 					<input
 						type="checkbox"
