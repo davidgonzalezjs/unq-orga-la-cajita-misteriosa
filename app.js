@@ -68,8 +68,6 @@ function calcular() {
 	cargarSalida(resultadoCadena)
 }
 
-document.getElementById('btn-calcular').onclick = calcular
-
 // cargar elementos
 cargarEntrada('codOp'    , [0,0]    )
 cargarEntrada('operando1', [0,0,0,0])
